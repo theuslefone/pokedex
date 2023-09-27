@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Aplicativo Web Pokemon com Next.js
+
+Este aplicativo web foi construído utilizando o poderoso framework Next.js. Ele oferece uma experiência contínua para os usuários que desejam explorar o mundo dos Pokemon. Com uma interface limpa e desempenho otimizado, os usuários podem navegar por seus Pokémon favoritos, visualizar seus detalhes e muito mais. O aplicativo também está equipado com otimização next/font, oferecendo uma experiência tipográfica agradável com a fonte Google Inter.
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
+Iniciando o Servidor de Desenvolvimento
+Utilize um dos seguintes comandos para iniciar o servidor de desenvolvimento:
+```
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Após iniciar o servidor, abra seu navegador e acesse http://localhost:3000 para visualizar o aplicativo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Editando Páginas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Comece modificando app/page.tsx para quaisquer edições ou atualizações. As mudanças refletirão instantaneamente graças ao recurso de atualização em tempo real.
