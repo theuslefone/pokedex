@@ -4,6 +4,7 @@
 
 .customList{
     flex-direction: column !important;
+    padding-right: 10px;
 }
 
 .customItens{

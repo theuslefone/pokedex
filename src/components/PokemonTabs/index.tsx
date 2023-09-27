@@ -30,11 +30,11 @@ const PokemonTabs = () => {
     <Tabs className={styles.customTabs} variant="enclosed">
       <TabList className={styles.customList}>
         {types.map(type => (
-          <Tab w="150px"  key={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</Tab>
+          <Tab _selected={{fontWeight: 'bold'}} border='none' w="150px"  key={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</Tab>
         ))}
       </TabList>
 
-      <TabPanels>
+      <TabPanels borderLeft='1px solid #00000021' pl='10px' >
         {types.map(type => (
           <TabPanel className={styles.customItens}  key={type}>
             {pokemons
