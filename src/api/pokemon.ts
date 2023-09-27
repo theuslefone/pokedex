@@ -5,7 +5,8 @@ export const fetchAllPokemons = async (limit = 150) => {
   const data = await response.json();
   return data.results.map((pokemon: any) => ({
     ...pokemon,
-    id: parseInt(pokemon.url.split("/")[6], 10)
+    id: parseInt(pokemon.url.split("/")[6], 10),
+    imageUrl: getPokemonImageURL(parseInt(pokemon.url.split("/")[6], 10))
   }));
 };
 
