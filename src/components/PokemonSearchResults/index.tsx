@@ -35,7 +35,7 @@ const PokemonSearchResults: React.FC<PokemonSearchResultsProps> = ({ query }) =>
 
   return (
     <div>
-      <Box w="100%" display='flex' flexWrap="wrap" gap='20px' >
+      <Box w="100%" display='flex' flexWrap="wrap" gap='20px' justifyContent='center' >
         { filteredPokemons.map(pokemon => (
           <PokemonCard
             key={pokemon.id}

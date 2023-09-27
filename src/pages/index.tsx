@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Box bgImage="url('/bg-red.svg')" h="650px">
+      <Box bgImage="url('/bg-red.svg')" h={{ base: "550px", md: "650px" }}>
         <Flex alignItems="center" justifyContent='center'>
           <Image src='/logo_pokemon.svg' alt="Logo Pokemon" w='350px' mb='15px' />
         </Flex>
@@ -22,7 +22,7 @@ export default function Home() {
         <Flex flexDirection="column" alignItems="center">
           <Image w="500px" src='/img-pokeball.png' alt="Logo Pokemon" />
           <Search onChange={handleSearchChange}/>
-          <Text pt='40px' fontSize='20px' color='white'>Comece digitando para buscar seu Pokémon favorito!</Text>
+          <Text pt='40px' fontSize={['16px', '20px']} color='white'>Comece digitando para buscar seu Pokémon favorito!</Text>
         </Flex>
       </Box>
     
