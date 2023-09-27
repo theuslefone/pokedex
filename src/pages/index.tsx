@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Box bgImage="url('/bg-red.svg')" h={{ base: "550px", md: "650px" }}>
+      <Box bgImage="url('/bg-red.svg')" h={{ base: "600px", md: "650px" }}>
         <Flex alignItems="center" justifyContent='center'>
           <Image src='/logo_pokemon.svg' alt="Logo Pokemon" w='350px' mb='15px' />
         </Flex>
