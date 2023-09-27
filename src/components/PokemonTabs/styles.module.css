@@ -1,0 +1,13 @@
+.customTabs {
+    display: flex !important;
+}
+
+.customList{
+    flex-direction: column !important;
+}
+
+.customItens{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px;
+}
