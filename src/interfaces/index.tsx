@@ -43,16 +43,17 @@ interface PokemonSearchResultsProps {
 }
 
 interface PokemonStats {
-    hp: number;
-    attack: number;
-    defense: number;
-    spAttack: number;
-    spDefense: number;
-    speed: number;
+    base_stat: number;
+    effort: number;
+    stat: {
+        name: string;
+        url: string;
+    };
 }
 
 interface PokemonDetailsPerId extends PokemonDetails {
     abilities: string[];
     weaknesses: string[];
-    stats: PokemonStats;
+    stats: PokemonStats[];
 }
+
