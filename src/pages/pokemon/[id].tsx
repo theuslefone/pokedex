@@ -42,7 +42,7 @@ function PokemonPage({ pokemon }: PokemonPageProps) {
           ))}
         </Flex>
 
-        <VStack spacing={4} w="100%" mt={4} align="start">
+        <VStack spacing={4} w="20%" mt={4} align="start">
           <Box>
             <Text fontWeight="medium">HP: {getStatByName(pokemon.stats, 'hp')}</Text>
             <Progress value={getStatByName(pokemon.stats, 'hp')} max={100} colorScheme="green" size="sm" />
