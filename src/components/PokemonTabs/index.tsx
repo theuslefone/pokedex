@@ -30,7 +30,16 @@ const PokemonTabs = () => {
     <Tabs className={styles.customTabs} variant="enclosed">
       <TabList className={styles.customList}>
         {types.map(type => (
-          <Tab _selected={{fontWeight: 'bold'}} border='none' w="150px"  key={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</Tab>
+          <Tab    
+            _hover={{ 
+              bgColor: 'gray.100', 
+              color: 'teal.500'
+            }}
+             _selected={{fontWeight: 'bold'}} 
+            border='none' 
+            w="150px"  
+            key={type}>{type.charAt(0).toUpperCase() + type.slice(1)}
+          </Tab>
         ))}
       </TabList>
 
