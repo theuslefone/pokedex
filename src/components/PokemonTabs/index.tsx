@@ -41,9 +41,7 @@ const PokemonTabs = () => {
               .map(pokemon => (
                 <PokemonCard
                     key={pokemon.id}
-                    id={pokemon.id}
-                    name={pokemon.name}
-                    imageUrl={pokemon.sprites.front_default}
+                    pokemon={pokemon}
                 />
               ))}
           </TabPanel>
