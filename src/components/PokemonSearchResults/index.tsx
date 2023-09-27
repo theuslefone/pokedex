@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Fuse from 'fuse.js';
 import { fetchAllPokemons, getPokemonImageURL } from '../../api/pokemon';
 import PokemonCard from '../Pokemon/PokemonCard';
+import { Box } from '@chakra-ui/react';
 
 const PokemonSearchResults: React.FC<PokemonSearchResultsProps> = ({ query }) => {
 
@@ -34,13 +35,14 @@ const PokemonSearchResults: React.FC<PokemonSearchResultsProps> = ({ query }) =>
 
   return (
     <div>
-      { filteredPokemons.map(pokemon => (
-        <PokemonCard
-          key={pokemon.id}
-          pokemon={pokemon}
-        />
-    
-      ))}
+      <Box w="100%" display='flex' flexWrap="wrap" >
+        { filteredPokemons.map(pokemon => (
+          <PokemonCard
+            key={pokemon.id}
+            pokemon={pokemon}
+          />
+        ))}
+      </Box>
     </div>
   );
 }
