@@ -2,6 +2,7 @@ import { Tab, Tabs, TabList, TabPanel, TabPanels } from "@chakra-ui/react";
 import { useEffect, useState, useCallback } from "react";
 import PokemonCard from "../Pokemon/PokemonCard";
 import { fetchAllPokemons, fetchPokemonDetails, getUniqueTypes } from "../../api/pokemon";
+import styles from "./styles.module.css";
 
 const PokemonTabs = () => {
   const [pokemons, setPokemons] = useState<PokemonDetails[]>([]);
@@ -26,20 +27,20 @@ const PokemonTabs = () => {
   }, [fetchPokemonsData]);
 
   return (
-    <Tabs variant="enclosed">
-      <TabList>
+    <Tabs className={styles.customTabs} variant="enclosed">
+      <TabList className={styles.customList}>
         {types.map(type => (
-          <Tab key={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</Tab>
+          <Tab w="150px"  key={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</Tab>
         ))}
       </TabList>
 
       <TabPanels>
         {types.map(type => (
-          <TabPanel key={type}>
+          <TabPanel className={styles.customItens}  key={type}>
             {pokemons
               .filter(pokemon => pokemon.types.some(t => t.type.name === type))
               .map(pokemon => (
-                <PokemonCard
+                <PokemonCard 
                     key={pokemon.id}
                     pokemon={pokemon}
                 />
