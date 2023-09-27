@@ -8,3 +8,6 @@ export const fetchAllPokemons = async (limit = 150) => {
     id: parseInt(pokemon.url.split("/")[6], 10)
     }));
 };
+
+export const getPokemonImageURL = (id: number): string => 
+  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
