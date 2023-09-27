@@ -1,13 +1,17 @@
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Box, Image, Text, Progress, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, useDisclosure, Link, Button  } from '@chakra-ui/react';
 import { fetchAllPokemons, fetchPokemonDetails, getPokemonImageURL } from '../../api/pokemon';
 
 interface PokemonPageProps {
-    pokemon: PokemonDetails;
+    pokemon: PokemonDetailsPerId;
 }
 
 function PokemonPage({ pokemon }: PokemonPageProps) {
+  console.log(pokemon);
   return (
     <Box padding={4}>
+      <Link href="/">
+        <Button mb={4}>Voltar</Button>
+    </Link>
       <Image src={getPokemonImageURL(pokemon.id)} alt={pokemon.name} boxSize="150px" mx="auto" />
       
       <Text fontWeight="bold" fontSize="2xl" textAlign="center" mt={4}>
@@ -20,6 +24,17 @@ function PokemonPage({ pokemon }: PokemonPageProps) {
             <Text>{typeInfo.type.name}</Text>
           </Box>
         ))}
+      </Box>
+
+      <Box mt={4}>
+        <Text>HP: {pokemon.stats.hp}</Text>
+        <Progress value={pokemon.stats.hp} max={100} />
+        
+        <Text mt={4}>Attack: {pokemon.stats.attack}</Text>
+        <Progress value={pokemon.stats.attack} max={100} />
+
+        <Text mt={4}>Defense: {pokemon.stats.defense}</Text>
+        <Progress value={pokemon.stats.defense} max={100} />
       </Box>
     </Box>
   );
