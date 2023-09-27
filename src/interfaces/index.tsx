@@ -41,3 +41,18 @@ interface PokemonListResponse {
 interface PokemonSearchResultsProps {
     query: string;
 }
+
+interface PokemonStats {
+    hp: number;
+    attack: number;
+    defense: number;
+    spAttack: number;
+    spDefense: number;
+    speed: number;
+}
+
+interface PokemonDetailsPerId extends PokemonDetails {
+    abilities: string[];
+    weaknesses: string[];
+    stats: PokemonStats;
+}
